@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Week10">
+      <UniqueIdentifier>{fe89e080-bb27-44fd-a5a8-0f9e233632f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Week9">
+      <UniqueIdentifier>{9b2dce9a-21c3-4cb1-9686-b1d1cd7f7045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Week8">
+      <UniqueIdentifier>{2f1e8bd7-56f9-448e-bd52-0484e5c00e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exp">
+      <UniqueIdentifier>{107bfbe3-45de-431f-9f96-2f6d84dda1b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinnerTree.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="P340.h">
+      <Filter>Header Files\Week10</Filter>
+    </ClInclude>
+    <ClInclude Include="P352.h">
+      <Filter>Header Files\Week10</Filter>
+    </ClInclude>
+    <ClInclude Include="P359.h">
+      <Filter>Header Files\Week10</Filter>
+    </ClInclude>
+    <ClInclude Include="P301.h">
+      <Filter>Header Files\Week9</Filter>
+    </ClInclude>
+    <ClInclude Include="P304.h">
+      <Filter>Header Files\Week9</Filter>
+    </ClInclude>
+    <ClInclude Include="P316.h">
+      <Filter>Header Files\Week9</Filter>
+    </ClInclude>
+    <ClInclude Include="P287.h">
+      <Filter>Header Files\Week8</Filter>
+    </ClInclude>
+    <ClInclude Include="P277_P278.h">
+      <Filter>Header Files\Week8</Filter>
+    </ClInclude>
+    <ClInclude Include="Experiment3.h">
+      <Filter>Header Files\Exp</Filter>
+    </ClInclude>
+    <ClInclude Include="Experiment1.h">
+      <Filter>Header Files\Exp</Filter>
+    </ClInclude>
+    <ClInclude Include="Experiment2.h">
+      <Filter>Header Files\Exp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
