@@ -121,6 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LoserTree.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="WinnerTree.cpp" />
   </ItemGroup>

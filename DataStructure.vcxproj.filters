@@ -33,6 +33,9 @@
     <ClCompile Include="WinnerTree.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="LoserTree.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="P340.h">
