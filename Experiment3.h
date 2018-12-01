@@ -93,29 +93,24 @@ public:
 	void InsertToRight(TreeNode<T> *parent, T rightChild);
 
 private:
+	TreeNode<T>* Copy(TreeNode<T> *parent)
+	{
+		if (parent == NULL)
+			return NULL;
+		TreeNode<T>* temp = new TreeNode<T>(parent->data);
+		temp->leftChild = Copy(parent->leftChild);
+		temp->rightChild = Copy(parent->rightChild);
+		return temp;
+	}
+
+private:
 	TreeNode<T> *root;
 };
 
 template<class T>
 BinaryTree<T>::BinaryTree(BinaryTree & bt)
 {
-	LevelorderIterator<T> iterator(bt.GetRoot());
-	TreeNode<T> *temp = NULL;
-	TreeNode<T> *newNode = NULL;
-
-	while (true)
-	{
-		temp = iterator.GetCurrNode();
-		iterator.Next();
-
-		if (temp != NULL)
-		{
-			newNode = new TreeNode<T>(temp->data);
-			newNode->leftChild = temp->leftChild;
-			newNode->rightChild = temp->rightChild;
-		}
-		else break;
-	}
+	this->root = Copy(bt.GetRoot());
 }
 
 template<class T>
@@ -350,8 +345,6 @@ void run_exp3()
 	binaryTree.InsertToRight(binaryTree.GetRoot()->GetRightChild(), 'G');
 	binaryTree.InsertToLeft(binaryTree.GetRoot()->GetLeftChild()->GetLeftChild(), 'H');
 
-	BinaryTree<char> copyTree(binaryTree);
-
 	//中序遍历迭代器
 	InorderIterator<char> inorder(binaryTree.GetRoot());
 	while (true)
@@ -405,6 +398,23 @@ void run_exp3()
 	while (true)
 	{
 		char *result = leverorder.Next();
+		if (result)
+		{
+			cout << *result << " ";
+		}
+		else
+		{
+			break;
+		}
+	}
+	cout << endl;
+
+	cout << "通过拷贝构造函数生成的树：";
+	BinaryTree<char> copyTree(binaryTree);
+	LevelorderIterator<char> copy(copyTree.GetRoot());
+	while (true)
+	{
+		char *result = copy.Next();
 		if (result)
 		{
 			cout << *result << " ";
