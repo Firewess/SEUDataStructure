@@ -129,6 +129,12 @@
     <ClInclude Include="Experiment1.h" />
     <ClInclude Include="Experiment2.h" />
     <ClInclude Include="Experiment3.h" />
+    <ClInclude Include="P183_P184.h" />
+    <ClInclude Include="P194.h" />
+    <ClInclude Include="P201.h" />
+    <ClInclude Include="P225.h" />
+    <ClInclude Include="P267.h" />
+    <ClInclude Include="P272_P273.h" />
     <ClInclude Include="P277_P278.h" />
     <ClInclude Include="P287.h" />
     <ClInclude Include="P301.h" />

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include "P194.h"	//引入自定义的模板链表类Chain
 
 using namespace std;
 
@@ -19,21 +20,6 @@ using namespace std;
 /*
 以下对应于英文书P340 9
 */
-class Node
-{
-	friend class Graph;
-public:
-	Node(int data = 0)
-	{
-		this->data = data;
-		link = NULL;
-	}
-
-private:
-	int data;
-	Node *link;
-};
-
 class Graph
 {
 	friend istream & operator >>(istream &is, Graph &graph);
@@ -63,18 +49,19 @@ private:
 	int e;	//边数
 	//因为对于图，只有在建立的时候插入操作较多，其余操作主要为定位元素，
 	//故选用vector，没有选用list
-	vector<Node*> adjList;
+	vector<Chain<int>*> adjList;
 };
 
 void Graph::InsertVertex(int v)
 {
-	adjList.push_back(new Node(v));
+	adjList.push_back(new Chain<int>());
+	adjList.at(adjList.size() - 1)->Add(v);
 	n++;
 }
 
 void Graph::InsertEdge(int u, int v)
 {
-	adjList.at(u);
+	adjList.at(u)->Add(v);
 	e++;
 }
 
@@ -101,7 +88,16 @@ istream & operator >>(istream & is, Graph &graph)
 
 ostream & operator <<(ostream &os, Graph &graph)
 {
-	
+	for (int i = 0; i < graph.adjList.size(); i++)
+	{
+		Chain<int> *list = graph.adjList.at(i);
+		ChainIterator<int> iterator;
+		iterator = list->begin();
+		iterator++;
+		for (; iterator != list->end(); iterator++)
+			cout << "(" << (list->GetFirst())->GetData() << ", " << *(iterator.operator->()) << ") ";
+		cout << endl;
+	}
 
 	return os;
 }
