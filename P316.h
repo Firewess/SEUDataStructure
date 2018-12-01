@@ -22,7 +22,7 @@ public:
 	Sets(int num);
 	~Sets()
 	{
-		delete[] parent;
+		if(parent) delete[] parent;
 	}
 
 	void SimpleUnion(int i, int j);
@@ -109,8 +109,6 @@ void run_P316()
 
 	cout << "Simple" << setw(10) << totalTime << setw(15) << endl;
 
-	simpleSet.~Sets();
-
 	Sets weightedSets(5000);
 	start = clock();
 	for (int i = 0; i < 10000; i++)
@@ -121,5 +119,4 @@ void run_P316()
 	totalTime = (double)(stop - start) / CLOCKS_PER_SEC;
 
 	cout << "Weighted" << setw(10) << totalTime << setw(15) << endl;
-	weightedSets.~Sets();
 }
