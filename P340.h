@@ -7,6 +7,7 @@
 **************************************************/
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include "P194.h"	//引入自定义的模板链表类Chain
 
@@ -26,6 +27,21 @@ class Graph
 	friend ostream & operator <<(ostream &os, Graph &graph);
 public:
 	Graph():n(0), e(0){}
+	Graph(ifstream &is) :n(0), e(0)
+	{
+		int vNum;
+		is >> vNum;
+		for (int i = 0; i < vNum; i++)
+			this->InsertVertex(i);
+		int eNum;
+		is >> eNum;
+		int from, to;
+		for (int i = 0; i < eNum; i++)
+		{
+			is >> from >> to;
+			this->InsertEdge(from, to);
+		}
+	}
 	//~Graph();
 	bool IsEmpty() const
 	{
@@ -104,7 +120,8 @@ ostream & operator <<(ostream &os, Graph &graph)
 
 void run_P340()
 {
-	Graph graph;
-	cin >> graph;
+	ifstream is("graph.txt");	//使用了从文件中读取输入的构造函数
+	Graph graph(is);
+	//cin >> graph;
 	cout << graph;
 }

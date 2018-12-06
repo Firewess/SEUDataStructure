@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "P194.h"	//引入自定义的模板链表类Chain
 #include <queue>
 
@@ -19,6 +20,22 @@ class Graph
 	friend ostream & operator <<(ostream &os, Graph &graph);
 public:
 	Graph() :n(0), e(0) { visited = NULL; }
+	Graph(ifstream &is) :n(0), e(0)
+	{
+		visited = NULL;
+		int vNum;
+		is >> vNum;
+		for (int i = 0; i < vNum; i++)
+			this->InsertVertex(i);
+		int eNum;
+		is >> eNum;
+		int from, to;
+		for (int i = 0; i < eNum; i++)
+		{
+			is >> from >> to;
+			this->InsertEdge(from, to);
+		}
+	}
 	//~Graph();
 	bool IsEmpty() const
 	{
@@ -40,8 +57,11 @@ public:
 	void DFS();
 	void BFS(int v);
 
+	void Components();
+
 private:
 	void DFS(const int v);
+	void DFSforComponent(const int v);
 
 private:
 	int n;	//顶点数	
@@ -129,6 +149,26 @@ void Graph::DFS(const int v)
 	}
 }
 
+void Graph::DFSforComponent(const int v)
+{
+	bool *temp = new bool[this->n];
+	fill(temp, temp + n, false);
+	temp[v] = true;
+	cout << v << " ";
+	ChainIterator<int> iterator;
+	Chain<int>* list = adjList.at(v);
+	iterator = list->begin();
+	iterator++;	//链表头节点存放的为顶点自身，故让迭代器自增一次
+	for (; iterator != list->end(); iterator++)
+	{
+		if (!temp[*(iterator.operator->())])
+			DFS(*(iterator.operator->()));
+	}
+	cout << endl;
+	delete[] temp;
+	temp = NULL;
+}
+
 /*
 以下对应于英文书P352 5
 */
@@ -165,17 +205,34 @@ void Graph::BFS(int v)
 /*
 以下对应于英文书P352 6
 */
+void Graph::Components()
+{
+	visited = new bool[n];
+	fill(visited, visited + n, false);
+	for (int i = 0; i < n; i++)
+	{
+		if (!visited[i])
+		{
+			DFSforComponent(i);
+		}
+	}
 
+	delete[] visited;
+	visited = NULL;
+}
 
 void run_P352()
 {
 	//以下对应于英文书P352 3
-	Graph graph;
-	cin >> graph;
+	ifstream is("graph.txt");	//使用了从文件中读取输入的构造函数
+	Graph graph(is);
+	//cin >> graph;
 	graph.DFS();
 	cout << endl;
 
 	//以下对应于英文书P352 5
 	graph.BFS(0);
 	cout << endl;
+
+	graph.Components();
 }
