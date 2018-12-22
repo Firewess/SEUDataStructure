@@ -134,5 +134,11 @@
     <ClInclude Include="P412_P416_P422.h">
       <Filter>Header Files\未完成\Week13</Filter>
     </ClInclude>
+    <ClInclude Include="P475.h">
+      <Filter>Header Files\未完成\Week14</Filter>
+    </ClInclude>
+    <ClInclude Include="P578.h">
+      <Filter>Header Files\未完成\Week14</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
