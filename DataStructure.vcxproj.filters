@@ -40,14 +40,8 @@
     <Filter Include="Header Files\未完成">
       <UniqueIdentifier>{5608da58-339e-45f3-a172-b9403834e2bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\未完成\Week11">
-      <UniqueIdentifier>{afffdde6-f412-4c13-98fe-179c065eebab}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\未完成\Week16">
       <UniqueIdentifier>{2ffc4b6f-cc31-45d8-8a57-68945604c182}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\未完成\Week12">
-      <UniqueIdentifier>{cb32eaa5-7ac6-4e5f-a7ae-4871a792aa1e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\未完成\Week15">
       <UniqueIdentifier>{d464d413-225f-4844-aa0b-771f93de19ba}</UniqueIdentifier>
@@ -57,6 +51,12 @@
     </Filter>
     <Filter Include="Header Files\未完成\Week14">
       <UniqueIdentifier>{d6599345-b6d7-4cb3-bc62-84c628564015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\已完成\Week11">
+      <UniqueIdentifier>{afffdde6-f412-4c13-98fe-179c065eebab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\已完成\Week12">
+      <UniqueIdentifier>{cb32eaa5-7ac6-4e5f-a7ae-4871a792aa1e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -123,13 +123,13 @@
       <Filter>Header Files\已完成\Week5</Filter>
     </ClInclude>
     <ClInclude Include="P372_P373_P375.h">
-      <Filter>Header Files\未完成\Week11</Filter>
+      <Filter>Header Files\已完成\Week11</Filter>
     </ClInclude>
     <ClInclude Include="P389_P390.h">
-      <Filter>Header Files\未完成\Week12</Filter>
+      <Filter>Header Files\已完成\Week12</Filter>
     </ClInclude>
     <ClInclude Include="P401_P405.h">
-      <Filter>Header Files\未完成\Week12</Filter>
+      <Filter>Header Files\已完成\Week12</Filter>
     </ClInclude>
     <ClInclude Include="P412_P416_P422.h">
       <Filter>Header Files\未完成\Week13</Filter>
