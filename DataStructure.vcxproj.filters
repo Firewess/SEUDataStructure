@@ -143,5 +143,11 @@
     <ClInclude Include="Experiment4.h">
       <Filter>Header Files\Exp</Filter>
     </ClInclude>
+    <ClInclude Include="P609.h">
+      <Filter>Header Files\未完成\Week15</Filter>
+    </ClInclude>
+    <ClInclude Include="P623.h">
+      <Filter>Header Files\未完成\Week15</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

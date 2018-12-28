@@ -150,6 +150,8 @@
     <ClInclude Include="P412_P416_P422.h" />
     <ClInclude Include="P475.h" />
     <ClInclude Include="P578.h" />
+    <ClInclude Include="P609.h" />
+    <ClInclude Include="P623.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
