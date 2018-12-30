@@ -9,3 +9,11 @@
 /*
 以下对应于英文书P475 6
 */
+template<class T>
+class HashTable
+{
+public:
+
+private:
+
+};
