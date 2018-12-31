@@ -138,6 +138,7 @@
     <ClInclude Include="P272_P273.h" />
     <ClInclude Include="P277_P278.h" />
     <ClInclude Include="P287.h" />
+    <ClInclude Include="P296.h" />
     <ClInclude Include="P301.h" />
     <ClInclude Include="P304.h" />
     <ClInclude Include="P316.h" />
